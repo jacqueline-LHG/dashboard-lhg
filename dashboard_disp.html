@@ -23,7 +23,7 @@
   </div>
   <footer>
     <span><strong>Lhg Mining</strong> &nbsp;·&nbsp; Mantenimiento — PCM &amp; Confiabilidad</span>
-    <span>Datos al: <strong>02/07/2026 09:50</strong> &nbsp;·&nbsp; Recarga cada 5 min</span>
+    <span>Datos al: <strong>02/07/2026 12:24</strong> &nbsp;·&nbsp; Recarga cada 5 min</span>
   </footer>
 </div>
 <script>
@@ -51,7 +51,8 @@ function makeChart(ctx,datos,labelTotal,fontSize){
   const bgT=labels.map((_,i)=>isTot[i]?C_TOT:C_TEC);
   const bgO=labels.map((_,i)=>isTot[i]?C_TOT2:C_OP);
   const fs=fontSize||9;
-  const dlOpts={anchor:"end",align:"top",formatter:v=>v!=null?v+"%":"",font:{size:fs,weight:"700"},color:"#333",clip:false};
+  // rotation: -90=vertical arriba, 0=horizontal, 90=vertical abajo
+  const dlOpts={anchor:"end",align:"top",formatter:v=>v!=null?v+"%":"",font:{size:fs,weight:"700"},color:"#333",clip:false,rotation:-90};
   return new Chart(ctx,{type:"bar",data:{labels,datasets:[
     {label:"Disp. Tecnica",data:tec,backgroundColor:bgT,borderRadius:4,barPercentage:.78,categoryPercentage:.85,datalabels:dlOpts},
     {label:"Disp. Tec+Op",data:op,backgroundColor:bgO,borderRadius:4,barPercentage:.78,categoryPercentage:.85,datalabels:dlOpts},
@@ -81,7 +82,8 @@ function buildSvGrid(d,sv_mode){
     const canvas=document.createElement("canvas");
     card.appendChild(stit);wrap.appendChild(canvas);card.appendChild(wrap);grid.appendChild(card);
     const datos=(d[sv_mode]||{})[sv]||[];
-    const c=makeChart(canvas,datos,"Total",10);allCharts.push(c);});
+    // tamaño de fuente para mini-charts supervisores — cambiar aqui
+   const c=makeChart(canvas,datos,"Total",13);allCharts.push(c);});
   const leg=document.createElement("div");leg.className="legend";leg.style.flexShrink="0";
   leg.innerHTML="<div class=\"li\"><div class=\"ld\" style=\"background:"+C_TEC+"\"></div>Disp. Tecnica</div><div class=\"li\"><div class=\"ld\" style=\"background:"+C_OP+"\"></div>Disp. Tec+Op</div><div class=\"li\"><div class=\"ld\" style=\"background:"+C_META+";height:3px;border-radius:0;width:20px\"></div>Meta 90%</div><div class=\"li\"><div class=\"ld\" style=\"background:"+C_TOT+"\"></div>Total supervisor</div>";
   area.appendChild(leg);}
@@ -99,7 +101,8 @@ function renderSlide(){
     const flLabel={anual_A:"Flota A",anual_C:"Flota C",mes_A:"Flota A",mes_C:"Flota C"}[slide.sv_mode]||"";
     const titulo=(slide.tipo==="anual"?"Disponibilidad Anual":"Disponibilidad Mensual")+" - <span>"+flLabel+" - "+d.label+"</span>";
     document.getElementById("chart-title").innerHTML=titulo;
-    chartInst=makeChart(document.getElementById("main-chart"),datos,"Total "+flLabel,13);}
+    // tamaño de fuente para charts principales — cambiar aqui
+    chartInst=makeChart(document.getElementById("main-chart"),datos,"Total "+flLabel,18);}
   document.getElementById("tv-sub").textContent=slide.label+" - "+d.label;
   startP(slide.dur);clearTimeout(sT);sT=setTimeout(nextSlide,slide.dur);}
 function nextSlide(){seqIdx=(seqIdx+1)%SEQ.length;if(seqIdx===0){location.reload();return;}renderSlide();}
