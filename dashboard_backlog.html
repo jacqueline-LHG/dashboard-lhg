@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <title>Dashboard Backlog Diario – Lhg Mining</title>
-  <style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}:root{--na:#E8500A;--ng:#1A1A1A;--gr:#666;--g2:#E8E8E8}html,body{height:100%;background:#F0F2F5;font-family:'Inter',Arial,sans-serif;color:var(--ng);overflow:hidden}.w{height:100vh;display:grid;grid-template-rows:auto 1fr auto;grid-template-columns:1fr;padding:1.2vh 1.8vw;gap:.6vh;overflow:hidden}header{display:flex;align-items:center;justify-content:space-between;background:#fff;padding:.8vh 1.4vw;border-radius:10px;border-bottom:3px solid var(--na)}.logo{height:40px;width:auto}.htit{text-align:center;flex:1;padding:0 1vw}.htit h1{font-size:clamp(1rem,1.5vw,1.6rem);font-weight:700}.htit .sub{font-size:clamp(.75rem,1.05vw,1.15rem);font-weight:600;color:var(--na);margin-top:3px}.hright{text-align:right;min-width:180px}.hfecha{font-size:clamp(.6rem,.78vw,.86rem);color:var(--gr);margin-bottom:2px}.hhora{font-size:clamp(.95rem,1.35vw,1.5rem);font-weight:700;font-variant-numeric:tabular-nums;line-height:1}.hoy-btn{margin-top:3px;font-size:clamp(.55rem,.72vw,.8rem);border:1.5px solid var(--na);border-radius:5px;padding:2px 8px;color:var(--na);font-weight:700;background:#fff;cursor:pointer}.chart-area{background:#fff;border-radius:10px;padding:1vh 1.5vw;box-shadow:0 1px 3px rgba(0,0,0,.06);display:flex;flex-direction:column;min-height:0;min-width:0;overflow:hidden}footer{display:flex;justify-content:space-between;align-items:center;font-size:clamp(.75rem,1vw,1.1rem);color:var(--gr);background:#fff;padding:.45vh 1.4vw;border-radius:10px}footer strong{color:var(--ng)}.hm-wrap{flex:1;display:flex;flex-direction:column;min-height:0;min-width:0}.hm-scroll{flex:1;overflow:auto;min-height:0;min-width:0;border-radius:6px}table.hm{border-collapse:collapse;table-layout:fixed}table.hm col.hm-col-act{width:190px}table.hm col.hm-col-day{width:25px}table.hm th,table.hm td{text-align:center;padding:3px 1px;font-size:clamp(.55rem,.68vw,.78rem);white-space:nowrap;border:1px solid #fff}table.hm thead th{background:#F8F8F8;color:#666;font-weight:700;position:sticky;z-index:2}table.hm thead tr.hm-fila-mes th{top:0;height:20px;letter-spacing:.04em;text-transform:uppercase;font-size:clamp(.5rem,.62vw,.7rem)}table.hm thead tr.hm-fila-dia th{top:20px}table.hm th.hm-act-h{position:sticky;left:0;top:0;z-index:4;background:#F8F8F8;text-align:left;padding-left:8px}table.hm td.hm-act{text-align:left;font-weight:600;background:#fff;position:sticky;left:0;z-index:1;padding-left:8px;color:#1A1A1A}table.hm tr.hm-grupo td{background:#E0E0E0;font-weight:700;text-align:left;color:#1A1A1A;padding-left:8px;position:static}table.hm tr.hm-total td{background:#F0F0F0;font-weight:700;border-top:2px solid #E8500A;position:static}table.hm tr.hm-total td.hm-act{position:sticky;left:0;background:#F0F0F0}.legend{display:flex;gap:1.2vw;align-items:center;margin-top:.4vh;flex-wrap:wrap;flex-shrink:0}.li{display:flex;align-items:center;gap:5px;font-size:clamp(.55rem,.7vw,.78rem);color:var(--gr)}.grad{width:140px;height:12px;border-radius:3px;background:linear-gradient(to right,hsl(120,75%,88%),hsl(30,75%,70%) 70%,hsl(0,75%,50%))}</style>
+  <style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}:root{--na:#E8500A;--ng:#1A1A1A;--gr:#666;--g2:#E8E8E8}html,body{height:100%;background:#F0F2F5;font-family:'Inter',Arial,sans-serif;color:var(--ng);overflow:hidden}.w{height:100vh;display:grid;grid-template-rows:auto 1fr auto;grid-template-columns:1fr;padding:1.2vh 1.8vw;gap:.6vh;overflow:hidden}header{display:flex;align-items:center;justify-content:space-between;background:#fff;padding:.8vh 1.4vw;border-radius:10px;border-bottom:3px solid var(--na)}.logo{height:40px;width:auto}.htit{text-align:center;flex:1;padding:0 1vw}.htit h1{font-size:clamp(1rem,1.5vw,1.6rem);font-weight:700}.htit .sub{font-size:clamp(.75rem,1.05vw,1.15rem);font-weight:600;color:var(--na);margin-top:3px}.hright{text-align:right;min-width:180px}.hfecha{font-size:clamp(.6rem,.78vw,.86rem);color:var(--gr);margin-bottom:2px}.hhora{font-size:clamp(.95rem,1.35vw,1.5rem);font-weight:700;font-variant-numeric:tabular-nums;line-height:1}.hoy-btn{margin-top:3px;font-size:clamp(.55rem,.72vw,.8rem);border:1.5px solid var(--na);border-radius:5px;padding:2px 8px;color:var(--na);font-weight:700;background:#fff;cursor:pointer}.chart-area{background:#fff;border-radius:10px;padding:1vh 1.5vw;box-shadow:0 1px 3px rgba(0,0,0,.06);display:flex;flex-direction:column;min-height:0;min-width:0;overflow:hidden}footer{display:flex;justify-content:space-between;align-items:center;font-size:clamp(.75rem,1vw,1.1rem);color:var(--gr);background:#fff;padding:.45vh 1.4vw;border-radius:10px}footer strong{color:var(--ng)}.toolbar{display:flex;gap:.5vw;align-items:center;margin-bottom:.6vh;flex-shrink:0}.btn{border:1.5px solid var(--g2);background:#F8F8F8;border-radius:6px;padding:5px 12px;font-size:clamp(.62rem,.8vw,.88rem);font-weight:700;cursor:pointer;color:var(--gr);transition:all .15s}.btn.active{background:var(--na);border-color:var(--na);color:#fff}.btn:hover:not(.active){border-color:var(--na);color:var(--na)}.hm-wrap{flex:1;display:flex;flex-direction:column;min-height:0;min-width:0}.hm-scroll{flex:1;overflow:auto;min-height:0;min-width:0;border-radius:6px}table.hm{border-collapse:collapse;table-layout:fixed}table.hm col.hm-col-act{width:200px}table.hm col.hm-col-day{width:29px}table.hm th,table.hm td{text-align:center;padding:4px 2px;font-size:clamp(.68rem,.85vw,.95rem);white-space:nowrap;border:1px solid #fff}table.hm thead th{background:#F8F8F8;color:#666;font-weight:700;position:sticky;z-index:2}table.hm thead tr.hm-fila-mes th{top:0;height:22px;letter-spacing:.04em;text-transform:uppercase;font-size:clamp(.55rem,.68vw,.76rem)}table.hm thead tr.hm-fila-dia th{top:22px}table.hm th.hm-act-h{position:sticky;left:0;top:0;z-index:4;background:#F8F8F8;text-align:left;padding-left:8px}table.hm td.hm-act{text-align:left;font-weight:700;font-size:clamp(.7rem,.9vw,1rem);background:#fff;position:sticky;left:0;z-index:1;padding-left:8px;color:#1A1A1A}table.hm tr.hm-grupo td{background:#E0E0E0;font-weight:700;text-align:left;color:#1A1A1A;padding-left:8px;position:static}table.hm tr.hm-total td{background:#F0F0F0;font-weight:700;border-top:2px solid #E8500A;position:static}table.hm tr.hm-total td.hm-act{position:sticky;left:0;background:#F0F0F0}.legend{display:flex;gap:1.2vw;align-items:center;margin-top:.4vh;flex-wrap:wrap;flex-shrink:0}.li{display:flex;align-items:center;gap:5px;font-size:clamp(.55rem,.7vw,.78rem);color:var(--gr)}.grad{width:140px;height:12px;border-radius:3px;background:linear-gradient(to right,hsl(120,75%,88%),hsl(30,75%,70%) 70%,hsl(0,75%,50%))}</style>
 </head>
 <body>
 <script>(function(){var PASS="LHGPCM.26",KEY="dash_lhg_auth";if(localStorage.getItem(KEY)!==PASS){var inp=prompt("Dashboard LHG Mining\nIngrese la contraseña:");if(inp!==PASS){document.documentElement.innerHTML='<div style="font-family:Arial;text-align:center;margin-top:30vh;font-size:1.1rem;color:#E8500A;font-weight:700">Acceso denegado.<br><br><button onclick="location.reload()" style="margin-top:1rem;padding:.5rem 1.5rem;background:#E8500A;color:#fff;border:none;border-radius:6px;cursor:pointer">Reintentar</button></div>';return;}localStorage.setItem(KEY,PASS);}})();</script>
@@ -16,7 +16,7 @@
   <div class="chart-area" id="chart-area"></div>
   <footer>
     <span><strong>Lhg Mining</strong> &nbsp;·&nbsp; Mantenimiento — PCM &amp; Confiabilidad</span>
-    <span>Datos al: <strong>03/07/2026 09:43</strong> &nbsp;·&nbsp; Recarga cada 5 min</span>
+    <span>Datos al: <strong>03/07/2026 09:56</strong> &nbsp;·&nbsp; Recarga cada 5 min</span>
   </footer>
 </div>
 <script>
@@ -39,19 +39,29 @@ function colorFor(v,maxV){
   return{bg,fg};
 }
 let scrollEl=null;
-function render(){
+let FLOTA="AC";
+function setFlota(f){
+  FLOTA=f;
+  const sl=scrollEl?scrollEl.scrollLeft:null;
+  render(sl);
+}
+function render(preserveScroll){
   const area=document.getElementById("chart-area");
   area.innerHTML="";
+  const toolbar=document.createElement("div");toolbar.className="toolbar";
+  toolbar.innerHTML="<button id=\"btn-ac\" class=\"btn"+(FLOTA==="AC"?" active":"")+"\" onclick=\"setFlota('AC')\">A + C</button><button id=\"btn-todos\" class=\"btn"+(FLOTA==="TODOS"?" active":"")+"\" onclick=\"setFlota('TODOS')\">A + C + Top Off</button>";
+  area.appendChild(toolbar);
   const wrap=document.createElement("div");wrap.className="hm-wrap";
   const scroll=document.createElement("div");scroll.className="hm-scroll";scrollEl=scroll;
   const table=document.createElement("table");table.className="hm";
   const nCols=DATA.columnas.length;
+  const gruposVis=DATA.grupos.filter(g=>FLOTA==="TODOS"||g.nombre!=="Top Off");
   let colgroup="<colgroup><col class=\"hm-col-act\"/>"+DATA.columnas.map(()=>"<col class=\"hm-col-day\"/>").join("")+"</colgroup>";
   let filaMes="<tr class=\"hm-fila-mes\"><th class=\"hm-act-h\" rowspan=\"2\">Activo</th>"+DATA.meses.map(m=>"<th colspan=\""+m.count+"\">"+m.label+"</th>").join("")+"</tr>";
   let filaDia="<tr class=\"hm-fila-dia\">"+DATA.columnas.map((d,i)=>"<th"+(i===DATA.hoy_idx?" style=\"color:var(--na)\"":"")+">"+d+"</th>").join("")+"</tr>";
   let thead="<thead>"+filaMes+filaDia+"</thead>";
   let tbody="<tbody>";
-  DATA.grupos.forEach(g=>{
+  gruposVis.forEach(g=>{
     tbody+="<tr class=\"hm-grupo\"><td colspan=\""+(nCols+1)+"\">"+g.nombre+"</td></tr>";
     g.activos.forEach(a=>{
       tbody+="<tr><td class=\"hm-act\">"+a.nombre+"</td>"+a.valores.map(v=>{
@@ -61,7 +71,13 @@ function render(){
       }).join("")+"</tr>";
     });
   });
-  tbody+="<tr class=\"hm-total\"><td class=\"hm-act\">TOTAL GENERAL</td>"+DATA.total.map(v=>v==null?"<td></td>":"<td>"+v+"</td>").join("")+"</tr>";
+  const totalVis=new Array(nCols).fill(null);
+  for(let i=0;i<nCols;i++){
+    let s=null;
+    gruposVis.forEach(g=>g.activos.forEach(a=>{const v=a.valores[i];if(v!=null)s=(s||0)+v;}));
+    totalVis[i]=s;
+  }
+  tbody+="<tr class=\"hm-total\"><td class=\"hm-act\">TOTAL "+(FLOTA==="TODOS"?"GENERAL":"A + C")+"</td>"+totalVis.map(v=>v==null?"<td></td>":"<td>"+v+"</td>").join("")+"</tr>";
   tbody+="</tbody>";
   table.innerHTML=colgroup+thead+tbody;
   scroll.appendChild(table);wrap.appendChild(scroll);
@@ -69,7 +85,8 @@ function render(){
   leg.innerHTML="<div class=\"li\">Menos<div class=\"grad\"></div>Más</div><div class=\"li\">Verde → Naranja desde 70% → Rojo cerca del máximo</div>";
   wrap.appendChild(leg);
   area.appendChild(wrap);
-  requestAnimationFrame(()=>requestAnimationFrame(()=>irAlFinal(false)));
+  if(preserveScroll!=null){scrollEl.scrollLeft=preserveScroll;}
+  else{requestAnimationFrame(()=>requestAnimationFrame(()=>irAlFinal(false)));}
 }
 function irAlFinal(smooth){
   if(!scrollEl)return;
